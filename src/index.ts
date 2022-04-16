@@ -2,10 +2,7 @@ type Method = 'get' | 'post' | 'put' | 'delete'
 type ReturnMethods = 'then' | 'catch' | 'always' | 'abort'
 
 // If you are trying to use with nodejs
-const XMLHttpRequest = 
-  typeof window !== 'undefined' && window.XMLHttpRequest
-    ? window.XMLHttpRequest
-    :  require('xmlhttprequest').XMLHttpRequest
+const XMLHttpRequest = window.XMLHttpRequest
     
 export function ajax (options: { baseUrl?: any; method?: any; url?: any; data?: any }) {
   var methods: Method[] = ['get', 'post', 'put', 'delete']

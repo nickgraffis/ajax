@@ -1,6 +1,6 @@
 {
   "name": "@nickgraffis/ajax",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vanilla JS version of ajax.",
   "main": "dist/index.js",
   "publishConfig": {
@@ -20,7 +20,7 @@
     "rollup": "rollup -c",
     "test": "vitest",
     "test-build": "npm run build && npm run rollup && node ./test-build.js",
-    "ci": "(npm run test-build && npm run rollup) & npm t & wait",
+    "ci": "npm run rollup",
     "prepublishOnly": "npm run ci && npm run rollup",
     "lint": "eslint \"**/*.{vue,ts,js}\""
   },
