@@ -1,0 +1,41 @@
+{
+  "name": "@nickgraffis/ajax",
+  "version": "0.0.1",
+  "description": "Vanilla JS version of ajax.",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "browser": "dist/index.min.js",
+  "files": [
+    "dist"
+  ],
+  "author": "Nick Graffis",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "preversion": "./preversion.sh",
+    "version": "./version.sh",
+    "build": "tsc",
+    "rollup": "rollup -c",
+    "test": "vitest",
+    "test-build": "npm run build && npm run rollup && node ./test-build.js",
+    "ci": "(npm run test-build && npm run rollup) & npm t & wait",
+    "prepublishOnly": "npm run ci && npm run rollup",
+    "lint": "eslint \"**/*.{vue,ts,js}\""
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "assert": "^2.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-brotli": "^3.1.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-polyfill-node": "^0.9.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "vitest": "^0.9.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
