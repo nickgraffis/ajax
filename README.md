@@ -15,5 +15,5 @@ pnpm i @nickgraffis/ajax
 ## Installation - Browser
 
 ```html
-<script src="https://unpkg.com/@nickgraffis/ajax@0.0.1/dist/ajax.min.js"></script>
+<script src="https://unpkg.com/@nickgraffis/ajax@0.0.2/dist/ajax.min.js"></script>
 ```
